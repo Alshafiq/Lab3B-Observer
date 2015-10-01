@@ -37,8 +37,7 @@ public class Student implements Observer {
 		{
 			boolean study = (boolean) obj;
 			Date  mid = this.prof.getMidterm();
-			//System.out.println(study);
-			//System.out.println(mid);
+			
 			if (study)
 			{
 				study(mid);

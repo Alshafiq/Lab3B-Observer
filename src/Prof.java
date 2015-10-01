@@ -3,20 +3,18 @@
  *
  */
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.Observable;
 
 public class Prof extends Observable{
 	private String name;
 	private Date midtermDate;
-	//private ArrayList<Student> students;
 	private TeachingAssistant ta;
 	private Student std;
 
 	public Prof(String aName) {
 		this.name = aName;
-		//this.students = new ArrayList<Student>();
+		
 	}
 
 	public Date getMidterm() {
@@ -29,10 +27,6 @@ public class Prof extends Observable{
 
 	public void setMidterm(Date date) {
 		this.midtermDate = date;
-		//for(Student s: this.students){
-		//	s.study(date);
-		//}
-		//ta.proctor(date);
 		setChanged();
 		notifyObservers(true);
 		
@@ -40,10 +34,6 @@ public class Prof extends Observable{
 	
 	public void postponeMidterm(Date date){
 		this.midtermDate = date;
-		//for(Student s: this.students){
-		//	s.party(date);
-		///}
-		//ta.postpone(date);
 		setChanged();
 		notifyObservers(false);
 		
@@ -54,7 +44,6 @@ public class Prof extends Observable{
 	}
 	
 	public void addStudent(Student s){
-		//this.students.add(s);
 		this.std = s;
 	}
 
@@ -68,9 +57,6 @@ public class Prof extends Observable{
 		p.addObserver(ta);
 		p.addObserver(s);
 		p.addObserver(s2);
-		//p.addStudent(s);
-		//p.addStudent(s2);
-		//p.setTA(ta);
 	
 		Date midterm = new Date();
 		p.setMidterm(midterm);
