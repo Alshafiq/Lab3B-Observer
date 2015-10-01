@@ -36,14 +36,6 @@ public class Prof extends Observable{
 		notifyObservers(false);
 		
 	}
-	
-	public void setTA(TeachingAssistant theTA){
-		this.ta = theTA;
-	}
-	
-	public void addStudent(Student s){
-		this.std = s;
-	}
 
 	public static void main(String[] args) {
 
