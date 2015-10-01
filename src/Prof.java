@@ -9,8 +9,6 @@ import java.util.Observable;
 public class Prof extends Observable{
 	private String name;
 	private Date midtermDate;
-	private TeachingAssistant ta;
-	private Student std;
 
 	public Prof(String aName) {
 		this.name = aName;
